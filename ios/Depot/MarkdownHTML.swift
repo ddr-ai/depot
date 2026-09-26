@@ -379,7 +379,7 @@ enum MarkdownHTML {
             return "\u{0}C\(codes.count - 1)\u{0}"
         }
         text = escape(text)
-        text = text.replacingOccurrences(of: #"<br\s*/?>"#, with: "<br>", options: .regularExpression)
+        text = text.replacingOccurrences(of: #"&lt;br\s*/?&gt;"#, with: "<br>", options: .regularExpression)
         text = replaceMatches(text, pattern: #"!\[([^\]]*)\]\(([^)\s]+)(?:\s+"[^&]*")?\)"#) { _, groups in
             let alt = groups[0]
             let url = absURL(unescape(groups[1]), ctx: ctx, image: true)
@@ -489,18 +489,25 @@ enum MarkdownHTML {
     }
 
     private static func escape(_ text: String) -> String {
-        text
-            .replacingOccurrences(of: "&", with: "&")
-            .replacingOccurrences(of: "<", with: "<")
-            .replacingOccurrences(of: ">", with: ">")
-            .replacingOccurrences(of: "\"", with: """)
+        var out = ""
+        out.reserveCapacity(text.count)
+        for ch in text {
+            switch ch {
+            case "&": out += "&amp;"
+            case "<": out += "&lt;"
+            case ">": out += "&gt;"
+            case "\"": out += "&quot;"
+            default: out.append(ch)
+            }
+        }
+        return out
     }
 
     private static func unescape(_ text: String) -> String {
         text
-            .replacingOccurrences(of: """, with: "\"")
-            .replacingOccurrences(of: ">", with: ">")
-            .replacingOccurrences(of: "<", with: "<")
-            .replacingOccurrences(of: "&", with: "&")
+            .replacingOccurrences(of: "&quot;", with: "\"")
+            .replacingOccurrences(of: "&gt;", with: ">")
+            .replacingOccurrences(of: "&lt;", with: "<")
+            .replacingOccurrences(of: "&amp;", with: "&")
     }
 }
