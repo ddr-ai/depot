@@ -241,7 +241,7 @@ struct RepoDetailView: View {
             if readme.isEmpty {
                 Text("No README.").foregroundStyle(DepotColor.subtle)
             } else {
-                ReadmeBlock(source: readme, owner: shown.owner, repo: shown.name, branch: shown.defaultBranch)
+                TranslatedReadme(source: readme, owner: shown.owner, repo: shown.name, branch: shown.defaultBranch)
             }
         }
     }
