@@ -13,6 +13,8 @@
 		D1000000000000000000001B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10000000000000000000013 /* Models.swift */; };
 		D1000000000000000000001C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10000000000000000000014 /* RootView.swift */; };
 		D1000000000000000000001D /* RepoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10000000000000000000015 /* RepoDetailView.swift */; };
+		D10000000000000000000020 /* MarkdownHTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000000000000000000001F /* MarkdownHTML.swift */; };
+		D10000000000000000000021 /* ReadmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000000000000000000002A /* ReadmeView.swift */; };
 		D1000000000000000000001E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D10000000000000000000017 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 		D10000000000000000000013 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		D10000000000000000000014 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D10000000000000000000015 /* RepoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailView.swift; sourceTree = "<group>"; };
+		D1000000000000000000001F /* MarkdownHTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownHTML.swift; sourceTree = "<group>"; };
+		D1000000000000000000002A /* ReadmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadmeView.swift; sourceTree = "<group>"; };
 		D10000000000000000000016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D10000000000000000000017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +60,8 @@
 				D10000000000000000000013 /* Models.swift */,
 				D10000000000000000000014 /* RootView.swift */,
 				D10000000000000000000015 /* RepoDetailView.swift */,
+				D1000000000000000000001F /* MarkdownHTML.swift */,
+				D1000000000000000000002A /* ReadmeView.swift */,
 				D10000000000000000000017 /* Assets.xcassets */,
 				D10000000000000000000016 /* Info.plist */,
 			);
@@ -144,6 +150,8 @@
 				D1000000000000000000001B /* Models.swift in Sources */,
 				D1000000000000000000001C /* RootView.swift in Sources */,
 				D1000000000000000000001D /* RepoDetailView.swift in Sources */,
+				D10000000000000000000020 /* MarkdownHTML.swift in Sources */,
+				D10000000000000000000021 /* ReadmeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

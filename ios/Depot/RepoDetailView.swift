@@ -241,7 +241,7 @@ struct RepoDetailView: View {
             if readme.isEmpty {
                 Text("No README.").foregroundStyle(DepotColor.subtle)
             } else {
-                ReadmeBlock(source: readme)
+                ReadmeBlock(source: readme, owner: shown.owner, repo: shown.name, branch: shown.defaultBranch)
             }
         }
     }
@@ -336,30 +336,6 @@ struct RepoDetailView: View {
         } catch {
             self.error = error.localizedDescription
         }
-    }
-}
-
-struct ReadmeBlock: View {
-    let source: String
-
-    var body: some View {
-        Group {
-            if let attributed = try? AttributedString(
-                markdown: source,
-                options: AttributedString.MarkdownParsingOptions(interpretedSyntax: .full)
-            ) {
-                Text(attributed)
-                    .font(.custom("Avenir Next", size: 16))
-                    .foregroundStyle(DepotColor.fg)
-                    .tint(DepotColor.fg)
-            } else {
-                Text(source)
-                    .font(.custom("Menlo", size: 12))
-                    .foregroundStyle(DepotColor.fg)
-            }
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .textSelection(.enabled)
     }
 }
 
