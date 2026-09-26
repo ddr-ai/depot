@@ -1,0 +1,6 @@
+.DS_Store
+build/
+DerivedData/
+*.ipa
+xcuserdata/
+ios/Depot/Assets.xcassets/AppIcon.appiconset/AppIcon.png
